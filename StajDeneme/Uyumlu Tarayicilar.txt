@@ -1,0 +1,9 @@
+Gelistirme yaparken Normalize.css kullandým.
+Tarayýcý olarak Chrome 72. surumunu kullandim.
+Test icin kullandigim diðer tarayicilar ise soyle:
+Firefox 65
+Opera 58
+Edge 18
+IE 11
+Bu tarayicilarda herhangi bir sorunla karsilasmadim.
+

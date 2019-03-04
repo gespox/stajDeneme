@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/Normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Example Site</title>
+</head>
+<body>
+<div id="top"></div>
+<div class="content">
+    <div class="sidebar">
+        <div class="logoPlace card">
+            <span>Logo Place</span>
+        </div>
+        <div class="menu card">
+            <div class="closeMenu">
+                <img src="img/menuicon.svg" alt="Menu Icon" /><span class="menuIcon">MENU</span>
+            </div>
+             <div class="ulClose">
+            <ul>
+                <li><a href="#" class="active1">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">OUR WORKS</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">JOURNAL</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="popularPost card">
+            <div class="populerTitle">
+                <span>POPULAR POSTS</span>
+                <p class="fancy"></p>
+            </div>
+            <div class="itemPlace">
+                <a href="#"><p><img src="img/popularpostimg1.jpg" alt="popularpost" />
+                    Lorem ipsum dolor sit amet, consectetur adipisicing </p></a>
+            </div>
+                <div class="itemPlace">
+                    <a href="#"><p><img src="img/popularpostimg2.jpg" alt="popularpost" />
+                    Accusamus ad atque consectetur, eaque et fugit  </p></a>
+                </div>
+                <div class="itemPlace">
+                    <a href="#"><p><img src="img/popularpostimg3.jpg" alt="popularpost" />
+                    Nulla pariatur quas qui quia quidem quis repudiandae</p></a>
+                </div>
+        </div>
+    </div>
+    <div class="mainContent ">
+        <div class="header card">
+         <span>HI! My Name Is Example. Welcome to my Website..</span>
+         <span class="icon">
+             <a href="#"><img src="img/socialiconRss.png" alt="" /></a>
+             <a href="#"><img src="img/socialiconFb.png" alt="" /></a>
+             <a href="#"><img src="img/socialiconTw.png" alt="" /></a>
+             <a href="#"><img src="img/socialiconG+.png" alt="" /></a>
+             <a href="#"><img src="img/socialiconFl.png" alt="" /></a>
+             <a href="#"><img src="img/socialiconIn.png" alt="" /></a>
+         </span>
+        </div>
+        <div class="banner card">
+            <div class="slideshow-container">
+                <div class="mySlides active">
+                    <a href="#"><img src="img/1.jpg" alt="BannerImg" class="active"/></a>
+                </div>
+
+                <div class="mySlides ">
+                    <a href="#"><img src="img/2.jpg" alt="BannerImg" class="active" /></a>
+                </div>
+
+                <div class="mySlides">
+                    <a href="#"><img src="img/3.jpg" alt="BannerImg" class="active" /></a>
+                </div>
+
+                <div class="prevBack prev">&#8672;</div>
+                <div class="nextBack next">&#8674;</div>
+
+            </div>
+        </div>
+        <div class="recentWorks card">
+            <div class="recentTitle">
+                <span>RECENT WORKS</span>
+                <p class="fancy2"></p>
+                <div class="prevBack2"><a class="prev2">&#8672;</a></div>
+                <div class="nextBack2"><a class="next2">&#8674;</a></div>
+            </div>
+            <div class="recentContent">
+                <div class="recentItem bigItem">
+                    <a href="#">
+                    <img src="img/recentworkimg1.jpg" alt="recentWorkImg1"  />
+                    <p class="postTitle">Mollitia nemo obcaecati optio</p>
+                    <p>A adipisci at consectetur culpa cumque dignissimos
+                        eum impedit incidunt mollitia</p>
+                    </a>
+                </div>
+                <div class="recentItem">
+                    <a href="#">
+                    <img src="img/recentworkimg2.jpg" alt="recentWorkImg2" />
+                    <p class="postTitle">Consectetur adipisicing</p>
+                    <p>Perspiciatis praesentium repellendus, rerum sint temporibus ullam vel!</p>
+                    </a>
+                </div>
+                <div class="recentItem">
+                    <a href="#">
+                    <img src="img/recentworkimg3.jpg" alt="recentWorkImg3" />
+                    <p class="postTitle">rerum sint temporibus</p>
+                    <p>Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. A adipisci </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer card">
+        <p>&#169; Example. All Right Reserved</p>
+            <div class="topback"><a href="#top" class="top">&#8673;</a></div>
+        </div>
+    </div>
+</div>
+<script src="js/js.js" ></script>
+<script>
+    var slideIndex = 1;
+    var slides = $('.mySlides');
+    $(document).ready(function(){
+        $('.next').on('click', function(){
+            slideIndex++;
+            if(slideIndex >slides.length){
+                slideIndex=1;
+                slides[slides.length-1].style.display="none";
+                slides[0].style.display = "block";
+            }
+            else{
+                slides[slideIndex-2].style.display="none";
+                slides[slideIndex-1].style.display = "block";
+            }
+        });
+        $('.prev').on('click', function(){
+            slideIndex--;
+            if(slideIndex <1){
+                slideIndex = slides.length;
+                slides[0].style.display="none";
+                slides[slideIndex-1].style.display="block";
+            }
+            else{
+                slides[slideIndex].style.display = "none";
+                slides[slideIndex-1].style.display = "block";
+            }
+        });
+    });
+</script>
+</body>
+</html>
